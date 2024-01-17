@@ -1,15 +1,16 @@
 CREATE DATABASE `soccer`;
+USE `soccer`;
 
 CREATE TABLE `jugadores`  (
   `id_jugador` int NOT NULL AUTO_INCREMENT,
-  `nombre_jugador` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `apellidos_jugador` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `goles_jugador` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `país_jugador` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `nombre_jugador` varchar(255) NOT NULL,
+  `apellidos_jugador` varchar(255) NOT NULL,
+  `goles_jugador` varchar(255) NOT NULL,
+  `país_jugador` varchar(255) NOT NULL,
   `edad_jugador` int NOT NULL,
-  `edad_jugador` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  PRIMARY KEY (`id_jugador`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = Dynamic;
+  `imagen_jugador` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_jugador`)
+) ENGINE = InnoDB;
 
 INSERT INTO `jugadores` VALUES (1, 'Cristiano Ronaldo', 'Dos Santos Aveiro', '864', 'Portugal', 38, 'https://caracoltv.brightspotcdn.com/dims4/default/2e7844b/2147483647/strip/true/crop/1600x1066+0+0/resize/1000x666!/format/webp/quality/90/?url=http%3A%2F%2Fcaracol-brightspot.s3.amazonaws.com%2F67%2Fd4%2Fbfc902824b75b2716f2b27a51766%2Fwhatsapp-image-2023-12-01-at-4.22.33%20PM.jpeg');
 INSERT INTO `jugadores` VALUES (2, 'Lionel Andrés', 'Messi Cuccitini', '821', 'Argentina', 36, 'https://media.admagazine.com/photos/637d11a6e63c8afac40e7a01/16:9/w_1600,c_limit/1442809583');

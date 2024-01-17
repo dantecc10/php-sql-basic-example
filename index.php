@@ -59,6 +59,7 @@
                                 } else { // No hay registros
                                     echo ("No se encontró ningún registro en la tabla de jugadores.");
                                 }
+                                $connection->close();
                                 ?>
                             </tbody>
                         </table>
